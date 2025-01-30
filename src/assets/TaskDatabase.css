@@ -1,0 +1,109 @@
+
+
+body {
+  background-color: black;  /* This changes the overall background to black */
+  color: white;  /* This changes the text color to white for readability */
+  margin: 0;  /* Remove default margin */
+  font-family: Arial, sans-serif; /* You can change the font family if needed */
+}
+
+
+.task-container {
+  width: 450px; 
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #444;
+  border-radius: 8px;
+  background-color: #343a40; 
+  color: white; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.task-container h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #f1f1f1; 
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input-container input {
+  width: 80%;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #495057; 
+  color: white; 
+}
+
+.input-container input:focus {
+  border-color: #28a745; 
+  background-color: #6c757d; 
+}
+
+/* Styling for the add todo button */
+.input-container button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #28a745; 
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background-color: #218838; 
+}
+
+/* Todo list styling */
+.todos-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todos-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #444; 
+}
+
+.todos-list li:last-child {
+  border-bottom: none;
+}
+
+.todos-list button {
+  background-color: #dc3545; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todos-list button:hover {
+  background-color: #c82333; 
+}
+
+.error-input {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.loading-message, .error-message {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #ffcc00; 
+}
+

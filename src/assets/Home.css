@@ -1,0 +1,43 @@
+/* Home.css */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align the content to the top */
+    align-items: center; /* Center align the content horizontally */
+    height: 100vh; /* Take full height of the viewport */
+    padding-top: 90px; /* Optional: Give some space at the top */
+  }
+  
+  .page-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px; /* Space between the title and the buttons */
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add space between buttons */
+  }
+  
+  
+  .navigate-btn {
+    width: 250px;
+    padding: 15px;
+    font-size: 18px;
+    /* background-color: #007bff; */
+    background: linear-gradient(135deg,
+    #D2A813 ,#000000); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .navigate-btn:hover {
+    background-color: #0056b3;
+  }
+  

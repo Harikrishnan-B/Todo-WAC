@@ -1,0 +1,59 @@
+{
+  "availability": [
+    { "label": "Available Now", "value": "availableNow" },
+    { "label": "Currently Unavailable", "value": "currentlyUnavailable" },
+    { "label": "Coming Soon", "value": "comingSoon" },
+    { "label": "Preorder", "value": "preorder" }
+  ],
+  "categories": [
+    { "label": "Gadgets", "value": "gadgets" },
+    { "label": "Apparel", "value": "apparel" },
+    { "label": "Household Items", "value": "householdItems" },
+    { "label": "Fitness Gear", "value": "fitnessGear" },
+    { "label": "Books", "value": "books" },
+    { "label": "Toys", "value": "toys" },
+    { "label": "Beauty Products", "value": "beautyProducts" },
+    { "label": "Office Supplies", "value": "officeSupplies" },
+    { "label": "Electronics", "value": "electronics" },
+    { "label": "Pet Supplies", "value": "petSupplies" }
+
+  ],
+  "price": [
+    { "label": "Under $50", "value": "under50" },
+    { "label": "$50 - $100", "value": "50to100" },
+    { "label": "$100 - $200", "value": "100to200" },
+    { "label": "Above $200", "value": "above200" },
+    { "label": "Under $20", "value": "under20" },
+    { "label": "$200 - $500", "value": "200to500" },
+    { "label": "Above $1000", "value": "above1000" }
+  ],
+  "brand": [
+    { "label": "Samsung", "value": "brandA" },
+    { "label": "Nothing", "value": "brandB" },
+    { "label": "Google Pixel", "value": "brandC" },
+    { "label": "Motorola", "value": "brandD" },
+    { "label": "Sony", "value": "brandE" },
+    { "label": "Apple", "value": "brandF" },
+    { "label": "Dell", "value": "brandG" },
+    { "label": "HP", "value": "brandH" },
+    { "label": "Asus", "value": "brandI" },
+    { "label": "Lenovo", "value": "brandJ" },
+    { "label": "Seiko", "value": "brandV" },
+    { "label": "Tommy Hilfiger", "value": "brandW" }
+  ],
+  "rating": [
+    { "label": "☆", "value": "1starUp" },
+    { "label": "☆☆", "value": "2starUp" },
+    { "label": "☆☆☆", "value": "3starUp" },
+    { "label": "☆☆☆☆", "value": "4starUp" },
+    { "label": "☆☆☆☆☆", "value": "5starOnly" },
+    { "label": "☆☆☆☆☆☆", "value": "6starOnly" }
+  ]
+}
+
+
+
+
+
+
+

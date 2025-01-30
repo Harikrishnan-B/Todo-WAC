@@ -1,0 +1,247 @@
+/* Main layout with filters on the left end */
+.filter-panel-layout {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Filters container on the left */
+.filters-container {
+  width: 250px;
+  position: fixed;
+  margin-top: 120px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #151515;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Main content on the right */
+.main-content {
+  margin-left: 270px; /* Leave space for the fixed filter panel */
+  padding: 20px;
+  width: calc(100% - 270px);
+}
+
+/* Header styling */
+.filter-panel-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Filter section dropdown */
+.filter-section {
+  margin-bottom: 15px;
+}
+
+.dropdown-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #008e84;
+  color: rgb(33, 25, 25);
+  padding: 10px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-arrow {
+  margin-left: 10px;
+}
+
+.dropdown-toggle {
+  display: none;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-top: 5px;
+  display: none;
+}
+
+.dropdown-content.open {
+  display: block;
+}
+
+.dropdown-toggle:checked + .dropdown-content {
+  display: block;
+}
+
+/* Checkbox styles */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.checkbox-container label {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Selected filters */
+.selected-filters {
+  background-color: #030303;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.selected-filters h4 {
+  margin-bottom: 10px;
+}
+
+.selected-filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.selected-filters-row .filter-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: #008e84;
+  color: white;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.selected-filters-row .filter-tag button {
+  margin-left: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+}
+
+
+.show-more-button {
+  margin-top: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.show-more-button:hover {
+  background-color: #1991a9;
+}
+
+
+.clear-all-button {
+  margin-top: 20px;
+  background-color: #1991a9;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 10%;
+}
+
+.clear-all-button:hover {
+  background-color: #11405b;
+}
+
+.clear-all-container {
+  text-align: center;
+  margin-top: 20px;
+}
+/* Search Bar Styling */
+.search-bar {
+  margin-bottom: 10px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* No Items Found */
+.no-items-found {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+
+
+/* Define the ease-in animation */
+@keyframes easeInEffect {
+  0% {
+    opacity: 0;
+    transform: translateX(20px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at normal position */
+  }
+}
+
+.dropdown-content .checkbox-container {
+  opacity: 0; /* Initially invisible */
+  transform: translateY(20px); /* Start from below */
+  animation: easeInEffect 0.5s ease-in forwards; /* Apply the animation */
+}
+
+/* Delay the animation for each item based on its index */
+.dropdown-content .checkbox-container:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.dropdown-content .checkbox-container:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.dropdown-content .checkbox-container:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.dropdown-content .checkbox-container:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.dropdown-content .checkbox-container:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.dropdown-content .checkbox-container:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.dropdown-content .checkbox-container:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.dropdown-content .checkbox-container:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.dropdown-content .checkbox-container:nth-child(9) {
+  animation-delay: 0.9s;
+}
+.dropdown-content .checkbox-container:nth-child(10) {
+  animation-delay: 1s;
+}
+.dropdown-content .checkbox-container:nth-child(11) {
+  animation-delay: 1.1s;
+}
+

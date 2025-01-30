@@ -1,0 +1,51 @@
+
+
+.custom-input-group {
+    border-radius: 0.375rem; 
+    border: 1px solid #ced4da; 
+    box-shadow: none; 
+    height: 59px;
+  }
+
+  .text-danger {
+    font-size: 0.875rem; /* Make the error text slightly smaller */
+  }
+
+  .custom-input-group .form-control.is-invalid {
+    margin-bottom: 0; 
+  }
+  
+  .custom-input-group .invalid-feedback {
+    /* position: relative; */
+    margin-top: 4px; 
+  }
+  
+  .custom-input-group-text {
+    background-color: #fff; /* White background for the prefix */
+    border-right: 1px solid #ced4da; /* Border between the country code and input */
+    color: #495057; /* Text color for the country code */
+    padding: 0.375rem 0.75rem; /* Adjust padding for the text */
+    font-size: 1rem; /* Ensures the text size matches other input fields */
+  }
+  
+  .custom-form-control {
+    border-radius: 0.375rem; /* Ensure the input field has the same rounded corners */
+    border-left: 0; /* Remove the left border to merge seamlessly with the InputGroup.Text */
+    padding-left: 1.5rem; /* Add some space to the left so the input text doesn't overlap with the country code */
+  }
+  
+  /* Optional: Style the invalid input field to match other invalid fields */
+  .custom-form-control.is-invalid {
+    border-color: #692e1a;
+  }
+  
+
+  /* AddressForm.css */
+.custom-form-control.is-invalid {
+    border-color: #dc3545;
+  }
+  
+  .custom-form-control.is-invalid + .form-control-feedback {
+    display: block; /* Make sure feedback is visible */
+  }
+  
