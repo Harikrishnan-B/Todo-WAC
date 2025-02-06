@@ -42,7 +42,11 @@ const resources = {
       preferencesRequired: "Please select at least one preference",
       messageLength: "Message must be at least 5 characters long",
     },
+    
   },
+
+
+  
   ta: {
     translation: {
       // Form Titles
@@ -79,20 +83,44 @@ const resources = {
       lastNameValidation: "கடைசி பெயர் தேவை",
       phoneValidation: "தவறான தொலைபேசி எண் வடிவம்",
       pincodeValidation: "அஞ்சல் குறியீடு சரியாக 6 இலக்கமாக இருக்க வேண்டும்",
-      termsRequired:  "நான் விதிமுறைகளை ஏற்கிறேன்",
+      termsRequired: "நான் விதிமுறைகளை ஏற்கிறேன்",
       preferencesRequired: "குறைந்தது ஒரு விருப்பத்தையாவது தேர்ந்தெடுக்கவும்",
       messageLength: "செய்தி குறைந்தது 5 எழுத்துகளாக இருக்க வேண்டும்",
     },
   },
+  ja: {
+    translation: {  // ✅ Added missing translation wrapper
+      addressForm: "住所フォーム",
+      firstName: "名",
+      lastName: "姓",
+      phoneNumber: "電話番号",
+      pincode: "郵便番号",
+      street: "住所",
+      city: "市区町村",
+      state: "都道府県",
+      district: "地区",
+      country: "国",
+      message: "メッセージ",
+      termsAndConditions: "利用規約",
+      acceptTerms: "利用規約に同意する",
+      acceptPrivacy: "プライバシーポリシーに同意する",
+      PreferredLocations: "希望地域",
+      submit: "送信",
+      required: "この項目は必須です",
+      termsRequired: "利用規約に同意する必要があります",
+      preferencesRequired: "少なくとも1つ選択してください",
+      pincodeValidation: "有効な6桁の郵便番号を入力してください",
+      messageLength: "メッセージは5文字以上である必要があります",
+    },
+  },
 };
 
-i18n
-  .use(initReactI18next)
-  .init({
-    resources,
-    lng: "en",
-    fallbackLng: "en",
-    interpolation: { escapeValue: false },
-  });
+i18n.use(initReactI18next).init({
+  resources,
+  lng: "en", // Default language
+  fallbackLng: ["en-GB", "en"], // Ensure en-GB falls back to en
+  interpolation: { escapeValue: false },
+});
+
 
 export default i18n;

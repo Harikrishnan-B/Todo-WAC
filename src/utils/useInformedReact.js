@@ -44,7 +44,7 @@ export const useInformedForm = (t) => {
   };
 
   const validatePhone = (value) => {
-    if (!value) return t("phoneRequired");
+    if (!value) return t("required");
     const cleanedValue = value.toString().replace(/\D/g, "");
 
     const finalValue = cleanedValue.startsWith("91")
@@ -54,7 +54,7 @@ export const useInformedForm = (t) => {
     if (finalValue.length === 10) {
       return undefined;
     }
-    return t("phoneLength");
+    return t("phoneValidation");
   };
 
   const validatePincode = (value) => {
@@ -146,7 +146,7 @@ export const useInformedForm = (t) => {
   
   const handleSubmit = (formState, formApi) => {
     const { values } = formState;
-    
+  
     // Order of fields before logging
     const orderedFields = [
       "firstName",
@@ -159,15 +159,12 @@ export const useInformedForm = (t) => {
       "district",
       "terms",
       "privacy",
-      "preferredLocations"
     ];
   
     const orderedValues = {};
     orderedFields.forEach(field => {
       orderedValues[field] = values[field];
     });
-  
-   
   
     // Skip error messages for empty submissions
     if (!checkRequiredFields(values)) {
@@ -176,18 +173,22 @@ export const useInformedForm = (t) => {
     }
   
     const errors = formState.errors;
-   
   
     if (Object.keys(errors || {}).length > 0) {
       return;
     }
   
-   
-  
+    // Format phone number
     let phoneNumber = values.phoneNumber || "";
     phoneNumber = formatPhoneNumber(phoneNumber);
   
-    const orderedSubmissionValues = { ...orderedValues, phoneNumber };
+    // Get the selected preferred locations
+    const selectedLocations = Object.keys(values.preferredLocations)
+      .filter(location => values.preferredLocations[location]) // Filter out false values
+      .map(location => location); // Get the location names that are selected
+  
+    // Include selected locations in the final submission
+    const orderedSubmissionValues = { ...orderedValues, phoneNumber, selectedLocations };
   
     console.log(
       "Form submitted successfully:",

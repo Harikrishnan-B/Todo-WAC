@@ -92,14 +92,14 @@ function Home() {
             FilterUI
           </ToggleButton>
         </Link>
-        <Link to="/FileUpload">
+        <Link to="/InformedFormat">
           <ToggleButton
             className="navigate-btn"
             type="radio"
             name="options"
             value="5"
           >
-            File Upload
+            Informed Format
           </ToggleButton>
         </Link>
       </ButtonGroup>

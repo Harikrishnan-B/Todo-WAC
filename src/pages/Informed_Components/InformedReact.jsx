@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Form, Checkbox } from "informed";
 import { useTranslation } from "react-i18next";
@@ -14,7 +15,7 @@ const InformedReact = () => {
     validateField,
     validatePhone,
     handleSubmit,
-  } = useInformedForm(t);
+  } = useInformedForm(t);          
 
   const validateTerms = (value) => {
     if (!value) {
@@ -218,7 +219,6 @@ const InformedReact = () => {
                 />
               </div>
 
-              {/* Show only one error message if either terms or privacy is missing */}
               {(formState.errors?.terms || formState.errors?.privacy) && (
                 <span
                   style={{ color: "red", display: "block", marginTop: "5px" }}
@@ -228,33 +228,18 @@ const InformedReact = () => {
               )}
             </div>
 
-            {/* Preferences - Horizontal Layout */}
             <div className="checkbox-section" style={{ marginTop: "20px" }}>
               <h3>{t("PreferredLocations")}</h3>
               <div style={{ display: "flex", gap: "30px", flexWrap: "wrap" }}>
-                <Checkbox
-                  name="preferredLocations.newYork"
-                  label="New York"
-                  validateOn="change"
-                />
-                <Checkbox
-                  name="preferredLocations.london"
-                  label="London"
-                  validateOn="change"
-                />
-                <Checkbox
-                  name="preferredLocations.singapore"
-                  label="Singapore"
-                  validateOn="change"
-                />
-                <Checkbox
-                  name="preferredLocations.tokyo"
-                  label="Tokyo"
-                  validateOn="change"
-                />
+                {["New York", "London", "Singapore", "Tokyo"].map((city) => (
+                  <Checkbox
+                    key={city} // Unique key for React
+                    name={`preferredLocations.${city.toLowerCase()}`} // Convert name to lowercase for form handling
+                    label={city} // Display name
+                    validateOn="change"
+                  />
+                ))}
               </div>
-
-              {/* Error message in red if no option is selected */}
               {formState.errors?.preferredLocations && (
                 <span
                   style={{ color: "red", display: "block", marginTop: "5px" }}
